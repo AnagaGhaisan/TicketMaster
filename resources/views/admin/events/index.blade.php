@@ -43,6 +43,14 @@
                          class="block px-2 py-1 text-white bg-blue-500 rounded">
                         Edit
                       </a>
+                      <a href="{{ route('admin.events.tickets.index', $event->id) }}"
+                        class="block px-2 py-1 text-white bg-green-500 rounded">
+                       Tiket
+                     </a>
+                     <a href="{{ route('admin.events.transactions.index', $event->id) }}"
+                        class="block px-2 py-1 text-white bg-yellow-500 rounded">
+                      Transaksi
+                      </a>
                       <form action="{{ route('admin.events.destroy', $event->id) }}" method="POST" class="block"
                             onsubmit="return confirm('Hapus event {{ $event->name }}?')">
                         @csrf

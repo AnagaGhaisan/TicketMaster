@@ -11,8 +11,8 @@ class HomeController extends Controller
  
     public function index(): View
     {  
+        $event = Event::all();
         $events= $this->fetchEvent();
-      
         $categories = $this->fetchCategory();
        
         return view('frontend.index',compact('events','categories'));
